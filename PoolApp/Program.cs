@@ -11,7 +11,7 @@ namespace studentportalinC
         static void Main()
         {
 
-            //Connection string to SQLDB11
+            //Connection string to SQLDB1
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
 

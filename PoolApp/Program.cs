@@ -146,13 +146,12 @@ namespace studentportalinC
 
             }
 
-            conn.Close();
-            conn.Dispose();
+          
 
         }
     }
 }
-    }
+
 
 
 

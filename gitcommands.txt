@@ -1,0 +1,2 @@
+git remote add origin https://glendeschema@dev.azure.com/glendeschema/Terraform_Automation/_git/Terraform_Automation
+git push -u origin --all

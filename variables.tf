@@ -6,6 +6,7 @@ provider azurerm {
   tenant_id       = var.tenant_id
 
 
+
   features {}
 
 }
@@ -14,6 +15,7 @@ variable "subscription_id" {}
 variable "client_id" {}
 variable "client_secret" {}
 variable "tenant_id" {}
+
 
 variable "prefix" {
   description = "The prefix which should be used for all resources in this example"

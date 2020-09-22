@@ -119,8 +119,6 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
 
 resource "azurerm_virtual_machine_extension" "test" {
   name                 = "install-nginx"
-  resource_group_name             = azurerm_resource_group.importrg.name
-  location                        = azurerm_resource_group.importrg.location
   virtual_machine_id   = azurerm_linux_virtual_machine_scale_set.vmss.name
   publisher            = "Microsoft.Azure.Extensions"
   type                 = "CustomScript"

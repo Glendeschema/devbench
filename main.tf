@@ -119,7 +119,7 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
 
 resource "azurerm_virtual_machine_extension" "test" {
   name                 = "install-nginx"
-  virtual_machine_id   = azurerm_linux_virtual_machine_scale_set.vmss.id
+  virtual_machine_id   = "/subscriptions/f51e55f4-9a7f-48df-a20e-7b46dd16458a/resourceGroups/front-end_group/providers/Microsoft.Compute/virtualMachineScaleSets/frontend-vmss"
   publisher            = "Microsoft.Azure.Extensions"
   type                 = "CustomScript"
   type_handler_version = "2.0"

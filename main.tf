@@ -89,7 +89,19 @@ resource "azurerm_linux_virtual_machine_scale_set" "vmss" {
   admin_username                  = "adminuser"
   disable_password_authentication = false
 
-
+  extension {
+    name                 = "install-nginx"
+    publisher            = "Microsoft.Azure.Extensions"
+    type                 = "CustomScript"
+    type_handler_version = "2.0"
+ 
+    settings = <<SETTINGS
+    {
+    "fileUris": ["https://schematerraformstate.blob.core.windows.net/code/apache2.sh"],
+    "commandToExecute": "bash apache2.sh"
+    }
+SETTINGS
+  }
   admin_password = "Munch13w@k@@2020"
 
   source_image_reference {
